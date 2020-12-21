@@ -1,0 +1,8 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: pauta-info
+
+server:
+  port: 8080
