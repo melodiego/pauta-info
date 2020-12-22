@@ -1,4 +1,4 @@
-package io.sicredi.pautainfo.api;
+package io.sicredi.pautainfo.api.controller;
 
 import io.sicredi.pautainfo.api.dto.PautaDTO;
 import io.sicredi.pautainfo.api.dto.form.PautaFormDTO;
