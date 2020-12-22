@@ -1,0 +1,23 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: pauta-info
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: sicredi_pauta
+      username: root
+      password: root
+      authentication-database: admin
+server:
+  port: 8080
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework: INFO
+    org.springframework.data.mongodb.core.MongoTemplate: INFO
+    org.apache.http: INFO
+    org.springframework.web: INFO
