@@ -31,8 +31,8 @@ public class PautaService {
     }
 
     public List<PautaDTO> findAll() {
-        Collection<Pauta> questionEntities = pautaRepository.findAll();
-        return questionEntities.stream().map(pauta -> mapper.map(pauta, PautaDTO.class)).collect(Collectors.toList());
+        Collection<Pauta> pautas = pautaRepository.findAll();
+        return pautas.stream().map(pauta -> mapper.map(pauta, PautaDTO.class)).collect(Collectors.toList());
     }
 
     public PautaDTO findById(String id) {
