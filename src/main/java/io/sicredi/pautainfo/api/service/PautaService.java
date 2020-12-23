@@ -60,4 +60,8 @@ public class PautaService {
                 .orElseThrow(() -> new RecordNotFoundException(CANNOT_FIND_ANY_REGISTRY_WITH_THIS_ID + id));
         pautaRepository.delete(pauta);
     }
+
+    public boolean existsPautaById(String id) {
+        return pautaRepository.findById(id).isPresent();
+    }
 }
