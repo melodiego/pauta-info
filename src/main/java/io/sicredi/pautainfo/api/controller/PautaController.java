@@ -39,7 +39,7 @@ public class PautaController {
         return new ResponseEntity<>(pautaService.save(pautaFormDTO), HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<PautaDTO> update(@PathVariable("id") String id, @RequestBody @Valid PautaFormDTO pautaFormDTO) {
         return new ResponseEntity<>(pautaService.update(id, pautaFormDTO), HttpStatus.OK);
     }
@@ -49,5 +49,10 @@ public class PautaController {
     public void delete(@PathVariable(value = "id") String id) {
         String codeEscape = HtmlUtils.htmlEscape(id);
         pautaService.delete(codeEscape);
+    }
+
+    @PostMapping("/{id}/existsPautaById")
+    public ResponseEntity<Boolean> existsPautaWithId(@PathVariable String id) {
+        return ResponseEntity.ok(pautaService.existsPautaById(id));
     }
 }
