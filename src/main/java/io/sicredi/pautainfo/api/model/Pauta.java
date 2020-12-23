@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(value = "person")
+@Document(value = "pauta")
 public class Pauta implements Serializable {
     private static final long serialVersionUID = 6148989086606727050L;
 
